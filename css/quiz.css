@@ -1,0 +1,162 @@
+/* ==================== 答题页 ==================== */
+.quiz-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.progress-wrap {
+  margin-bottom: 30px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.progress-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #66ffcc);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+#question-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  will-change: transform, opacity;
+}
+
+/* 向左滑出（前进到下一题） */
+#question-container.slide-out-left {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+/* 从右滑入（下一题进入） */
+#question-container.slide-in-right {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+/* 向右滑出（返回上一题） */
+#question-container.slide-out-right {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+/* 从左滑入（上一题进入） */
+#question-container.slide-in-left {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+/* 滑动到位 */
+#question-container.slide-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 兼容旧的 fade 类 */
+#question-container.fade-out {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+#question-container.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.question-number {
+  font-size: 14px;
+  font-family: monospace;
+  color: var(--accent);
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.question-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  word-break: break-word;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.25s;
+  text-align: left;
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.option-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-dim);
+}
+
+.option-btn.selected {
+  background: rgba(0, 255, 136, 0.12);
+  border-color: var(--accent);
+}
+
+.option-label {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: monospace;
+  color: var(--text-secondary);
+  transition: all 0.25s;
+}
+
+.option-btn.selected .option-label {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+.option-text {
+  padding-top: 2px;
+}
+

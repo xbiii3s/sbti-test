@@ -1,0 +1,155 @@
+/* ==================== 响应式 ==================== */
+
+/* 375px 及以下（iPhone SE / 小屏手机） */
+@media (max-width: 380px) {
+  .page {
+    padding: 16px;
+  }
+
+  /* 首页 */
+  .home-title {
+    font-size: 48px;
+  }
+
+  .home-subtitle {
+    font-size: 17px;
+  }
+
+  .home-desc {
+    font-size: 13px;
+    max-width: 300px;
+  }
+
+  .home-stats {
+    gap: 20px;
+  }
+
+  .stat-num {
+    font-size: 24px;
+  }
+
+  .btn-start {
+    padding: 14px 48px;
+    font-size: 16px;
+  }
+
+  .home-disclaimer {
+    font-size: 10px;
+    max-width: 280px;
+  }
+
+  /* 答题页 */
+  .quiz-container {
+    padding-top: 12px;
+  }
+
+  .progress-wrap {
+    margin-bottom: 20px;
+  }
+
+  .progress-header {
+    padding-right: 32px;
+  }
+
+  .question-text {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .options {
+    gap: 10px;
+  }
+
+  .option-btn {
+    padding: 14px 14px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .option-label {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  /* 结果页 */
+  .result-container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .result-code {
+    font-size: 52px;
+  }
+
+  .result-cn {
+    font-size: 24px;
+  }
+
+  .result-intro {
+    font-size: 14px;
+  }
+
+  .result-desc-card {
+    padding: 18px 16px;
+  }
+
+  .result-desc {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .result-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-poster, .btn-restart {
+    padding: 13px;
+    font-size: 14px;
+  }
+
+  /* 雷达图自适应 */
+  .radar-wrap {
+    margin-bottom: 24px;
+  }
+
+  /* 维度详情 */
+  .dim-name {
+    font-size: 12px;
+  }
+
+  .dim-explanation {
+    font-size: 12px;
+  }
+
+  /* 主题切换按钮 */
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    top: 12px;
+    right: 12px;
+  }
+}
+
+/* 超小屏（320px） */
+@media (max-width: 330px) {
+  .home-title {
+    font-size: 42px;
+  }
+
+  .result-code {
+    font-size: 46px;
+  }
+
+  .home-stats {
+    gap: 16px;
+  }
+
+  .btn-start {
+    padding: 12px 40px;
+    font-size: 15px;
+  }
+}

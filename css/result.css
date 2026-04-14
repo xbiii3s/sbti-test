@@ -1,0 +1,189 @@
+/* ==================== 结果页 ==================== */
+.result-container {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.result-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-family: monospace;
+  color: var(--accent);
+  background: rgba(0, 255, 136, 0.1);
+  padding: 4px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--accent-dim);
+  margin-bottom: 20px;
+}
+
+.result-code {
+  font-size: 72px;
+  font-weight: 800;
+  font-family: "Courier New", monospace;
+  color: var(--accent);
+  text-shadow: 0 0 40px rgba(0, 255, 136, 0.4);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.result-cn {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.result-intro {
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.result-similarity {
+  font-size: 14px;
+  font-family: monospace;
+  color: var(--accent);
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* 雷达图 */
+.radar-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#radar-canvas {
+  display: block;
+}
+
+/* 描述 */
+.result-desc-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.result-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+
+/* 维度详情 */
+.dimension-section-title {
+  font-size: 14px;
+  font-family: monospace;
+  color: var(--accent);
+  text-align: left;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.model-group {
+  margin-bottom: 24px;
+}
+
+.model-name {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: left;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dim-item {
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.dim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.dim-name {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.dim-level {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: monospace;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.dim-level.level-H { color: var(--accent); background: rgba(0, 255, 136, 0.1); }
+.dim-level.level-M { color: var(--warning); background: rgba(255, 170, 0, 0.1); }
+.dim-level.level-L { color: var(--danger); background: rgba(255, 68, 102, 0.1); }
+
+.dim-bar-bg {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.dim-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #66ffcc);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.dim-explanation {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* 底部按钮 */
+.result-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn-poster, .btn-restart {
+  flex: 1;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btn-poster {
+  background: var(--accent);
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.btn-poster:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+}
+
+.btn-restart {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-restart:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--text-primary);
+}
+

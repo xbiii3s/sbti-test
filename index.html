@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="SBTI 人格测试 - 31道题测出你的隐藏人格类型">
+  <title>SBTI 人格测试</title>
+
+  <!-- SESSION 4: PWA Meta -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a1a">
+  <!-- /SESSION 4 -->
+
+  <!-- CSS: Session 1 管理 -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/result.css">
+  <link rel="stylesheet" href="css/poster.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- 主题切换按钮 -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="切换主题">
+    <span class="icon-moon">&#127769;</span>
+    <span class="icon-sun">&#9728;&#65039;</span>
+  </button>
+
+  <!-- ==================== 首页 ==================== -->
+  <div id="page-home" class="page active">
+    <div class="home-container">
+      <div class="home-logo">PERSONALITY TEST</div>
+      <h1 class="home-title">SBTI</h1>
+      <p class="home-subtitle">Silly Big Personality Test</p>
+      <p class="home-desc">
+        通过 5 大模型、15 个维度的交叉分析，<br>
+        找到最契合你的 27 种人格之一。
+      </p>
+      <div class="home-stats">
+        <div class="stat-item">
+          <div class="stat-num">31</div>
+          <div class="stat-label">道题目</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">15</div>
+          <div class="stat-label">个维度</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">27</div>
+          <div class="stat-label">种人格</div>
+        </div>
+      </div>
+      <button class="btn-start" id="btn-start">开始测试</button>
+      <p class="home-disclaimer">本测试仅供娱乐，不具有任何心理学或科学依据。<br>请勿过于认真对待测试结果。</p>
+    </div>
+  </div>
+
+  <!-- ==================== 答题页 ==================== -->
+  <div id="page-quiz" class="page">
+    <div class="quiz-container">
+      <div class="progress-wrap">
+        <div class="progress-header">
+          <span class="progress-label">SBTI TEST</span>
+          <span class="progress-label" id="progress-text">0 / 31</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+      <div id="question-container"></div>
+    </div>
+  </div>
+
+  <!-- ==================== 结果页 ==================== -->
+  <div id="page-result" class="page">
+    <div class="result-container">
+      <div class="result-badge">YOUR SBTI TYPE</div>
+      <div class="result-code" id="result-code"></div>
+      <div class="result-cn" id="result-cn"></div>
+      <div class="result-intro" id="result-intro"></div>
+      <div class="result-similarity" id="result-similarity"></div>
+
+      <div class="radar-wrap">
+        <canvas id="radar-canvas"></canvas>
+      </div>
+
+      <div class="result-desc-card">
+        <div class="result-desc" id="result-desc"></div>
+      </div>
+
+      <div class="dimension-section-title">// 15 DIMENSIONS</div>
+      <div id="dimension-details"></div>
+
+      <div class="result-actions">
+        <button class="btn-poster" id="btn-poster">生成海报</button>
+        <button class="btn-restart" id="btn-restart">重新测试</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SESSION 3: Share HTML -->
+  <!-- /SESSION 3 -->
+
+  <!-- ==================== JS 加载顺序 ==================== -->
+
+  <!-- 核心：EventBus（必须最先加载） -->
+  <script src="js/core/event-bus.js"></script>
+
+  <!-- 数据层：Session 2 管理 -->
+  <script src="js/data/dimensions.js"></script>
+  <script src="js/data/questions.js"></script>
+  <script src="js/data/types.js"></script>
+  <script src="js/data/explanations.js"></script>
+
+  <!-- 引擎：Session 2 管理 -->
+  <script src="js/core/engine.js"></script>
+  <script src="js/core/state.js"></script>
+
+  <!-- 服务层：Session 2 管理 -->
+  <script src="js/services/storage.js"></script>
+  <script src="js/services/history.js"></script>
+
+  <!-- UI 层：Session 1 管理 -->
+  <script src="js/ui/radar.js"></script>
+  <script src="js/ui/result-renderer.js"></script>
+  <script src="js/ui/app.js"></script>
+
+  <!-- 功能层：Session 3 管理 -->
+  <script src="js/features/poster.js"></script>
+  <script src="js/features/poster-templates.js"></script>
+  <script src="js/features/share.js"></script>
+
+  <!-- 服务层：Session 4 管理 -->
+  <script src="js/services/analytics.js"></script>
+  <script src="js/services/pwa.js"></script>
+
+</body>
+</html>

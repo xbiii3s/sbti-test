@@ -1,0 +1,96 @@
+/* ==================== 首页 ==================== */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  gap: 20px;
+}
+
+.home-logo {
+  font-size: 16px;
+  font-family: monospace;
+  color: var(--accent);
+  letter-spacing: 4px;
+  opacity: 0.6;
+}
+
+.home-title {
+  font-size: 64px;
+  font-weight: 800;
+  font-family: "Courier New", monospace;
+  color: var(--accent);
+  text-shadow: 0 0 40px rgba(0, 255, 136, 0.4), 0 0 80px rgba(0, 255, 136, 0.2);
+  line-height: 1;
+}
+
+.home-subtitle {
+  font-size: 20px;
+  color: var(--text-secondary);
+  margin-top: -5px;
+}
+
+.home-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 340px;
+  line-height: 1.8;
+}
+
+.home-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: monospace;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.btn-start {
+  margin-top: 20px;
+  padding: 16px 60px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--bg-dark);
+  background: var(--accent);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 2px;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.btn-start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 50px rgba(0, 255, 136, 0.5);
+}
+
+.btn-start:active {
+  transform: translateY(0);
+}
+
+.home-disclaimer {
+  font-size: 11px;
+  color: var(--text-muted);
+  max-width: 300px;
+  line-height: 1.6;
+  opacity: 0.5;
+}
+

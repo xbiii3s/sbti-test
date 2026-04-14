@@ -1,0 +1,152 @@
+/* ==================== 主题变量 ==================== */
+
+/* 亮色主题 */
+[data-theme="light"] {
+  --bg-dark: #f0f2f5;
+  --bg-card: rgba(0, 0, 0, 0.04);
+  --bg-card-hover: rgba(0, 0, 0, 0.07);
+  --accent: #00b359;
+  --accent-dim: rgba(0, 179, 89, 0.25);
+  --text-primary: #1a1a2e;
+  --text-secondary: rgba(26, 26, 46, 0.7);
+  --text-muted: rgba(26, 26, 46, 0.45);
+  --danger: #e63950;
+  --warning: #d99200;
+}
+
+[data-theme="light"] body,
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="light"] .progress-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .option-btn {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .option-btn.selected {
+  background: rgba(0, 179, 89, 0.12);
+  border-color: var(--accent);
+}
+
+[data-theme="light"] .option-label {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .option-btn.selected .option-label {
+  background: var(--accent);
+  color: #fff;
+}
+
+[data-theme="light"] .result-code {
+  text-shadow: 0 0 30px rgba(0, 179, 89, 0.3);
+}
+
+[data-theme="light"] .result-desc-card {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .dim-bar-bg {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .dim-bar {
+  background: linear-gradient(90deg, var(--accent), #33cc77);
+}
+
+[data-theme="light"] .model-name {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .dim-level.level-H { color: var(--accent); background: rgba(0, 179, 89, 0.1); }
+[data-theme="light"] .dim-level.level-M { color: var(--warning); background: rgba(217, 146, 0, 0.1); }
+[data-theme="light"] .dim-level.level-L { color: var(--danger); background: rgba(230, 57, 80, 0.1); }
+
+[data-theme="light"] .btn-poster {
+  color: #fff;
+}
+
+[data-theme="light"] .btn-restart {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .btn-restart:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .btn-start {
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 179, 89, 0.3);
+}
+
+[data-theme="light"] .btn-start:hover {
+  box-shadow: 0 6px 30px rgba(0, 179, 89, 0.4);
+}
+
+[data-theme="light"] .home-title {
+  text-shadow: 0 0 30px rgba(0, 179, 89, 0.3), 0 0 60px rgba(0, 179, 89, 0.15);
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.theme-toggle:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-dim);
+  transform: rotate(20deg);
+}
+
+[data-theme="light"] .theme-toggle {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* 图标切换 */
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  position: absolute;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.theme-toggle .icon-sun {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+.theme-toggle .icon-moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+[data-theme="light"] .theme-toggle .icon-sun {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
